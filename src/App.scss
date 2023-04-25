@@ -1,5 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap");
 * {
+  box-sizing: border-box;
   margin: 0;
-  box-sizing: 0;
   padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+.main-container {
+  margin-inline: 35rem;
+  margin-top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 1330px) {
+    margin-inline: 25rem;
+  }
 }

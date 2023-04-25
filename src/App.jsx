@@ -1,10 +1,13 @@
 import React from "react";
 import "./App.scss";
+import Navigation from "./components/Navigation/Navigation";
 
 function App() {
   return (
     <>
-      <h1>test</h1>
+      <div className="main-container">
+        <Navigation />
+      </div>
     </>
   );
 }
