@@ -2,6 +2,11 @@ import React from "react";
 import "./styles.scss";
 
 export default function Navigation() {
+
+// function handleToggle() {
+//   bo
+// }
+
   return (
     <nav>
       <img src="src/assets/images/logo.svg" alt="logo" />
@@ -17,7 +22,7 @@ export default function Navigation() {
           </div>
         </div>
         <div className="display-manipulation-box">
-          <div className="toggle-bar">
+          <div className="toggle-bar" onClick={()=> {}}>
             <label className="switch">
               <input type="checkbox" />
               <span className="slider round"></span>

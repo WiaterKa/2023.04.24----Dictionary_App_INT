@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+
 import "./styles.scss";
 
-export default function Hero() {
+export default function Hero({ setOutcome }) {
+  const [input, setInput] = useState("");
+
+  async function getData() {
+    const API = `https://api.dictionaryapi.dev/api/v2/entries/en/${input}`;
+    const response = await fetch(API);
+    return response.json();
+  }
+
   return (
     <section className="hero">
-      <form>
-        <input placeholder="Search for any word"></input>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          getData().then((data) => {
+            setOutcome(data);
+            console.log(data[0].phonetic); //dochodzenie do poszczególnych właściwości elementu
+          });
+        }}
+      >
+        <input
+          onChange={(e) => {
+            setInput(e.target.value);
+          }}
+          placeholder="Search for any word"
+          value={input}
+        ></input>
         <img
           className="search-svg"
           src="src/assets/images/icon-search.svg"

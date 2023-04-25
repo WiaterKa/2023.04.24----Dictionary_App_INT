@@ -5,13 +5,15 @@ import Hero from "./components/Hero/Hero";
 import Navigation from "./components/Navigation/Navigation";
 import Noun from "./components/Noun/Noun";
 import Verb from "./components/Verb/Verb";
+import { useState } from "react";
 
 function App() {
+  const [outcome, setOutcome] = useState([]);
   return (
     <>
       <div className="main-container">
         <Navigation />
-        <Hero />
+        <Hero setOutcome={setOutcome} />
         <Noun />
         <Verb />
         <Footer />
