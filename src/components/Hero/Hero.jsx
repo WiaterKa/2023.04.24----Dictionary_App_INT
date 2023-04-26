@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import HeroOutcome from "../HeroOutcome/HeroOutcome";
 
 import "./styles.scss";
 
-export default function Hero({ setOutcome }) {
+export default function Hero({ setOutcome, outcome }) {
   const [input, setInput] = useState("");
 
   async function getData() {
@@ -18,7 +19,7 @@ export default function Hero({ setOutcome }) {
           e.preventDefault();
           getData().then((data) => {
             setOutcome(data);
-            console.log(data[0].phonetic); //dochodzenie do poszczególnych właściwości elementu
+
           });
         }}
       >
@@ -35,13 +36,7 @@ export default function Hero({ setOutcome }) {
           alt="search-icon"
         />
       </form>
-      <div className="outcome-box">
-        <div className="txt-box">
-          <h1>keyboard</h1>
-          <h2>/ˈkiːbɔːd/</h2>
-        </div>
-        <img src="src/assets/images/icon-play.svg" alt="play-img" />
-      </div>
+      <HeroOutcome outcome={outcome} />
     </section>
   );
 }

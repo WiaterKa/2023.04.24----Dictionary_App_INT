@@ -3,8 +3,7 @@ import "./App.scss";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import Navigation from "./components/Navigation/Navigation";
-import Noun from "./components/Noun/Noun";
-import Verb from "./components/Verb/Verb";
+import Outcome from "./components/Outcome/Outcome";
 import { useState } from "react";
 
 function App() {
@@ -13,10 +12,9 @@ function App() {
     <>
       <div className="main-container">
         <Navigation />
-        <Hero setOutcome={setOutcome} />
-        <Noun />
-        <Verb />
-        <Footer />
+        <Hero setOutcome={setOutcome} outcome={outcome} />
+        <Outcome outcome={outcome} />
+        <Footer outcome={outcome} />
       </div>
     </>
   );
