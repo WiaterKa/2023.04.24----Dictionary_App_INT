@@ -5,6 +5,14 @@
   padding-top: 2rem;
 }
 
+@media screen and (max-width: 590px) {
+  .footer {
+    margin-top: 3.2rem;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+}
+
 .footer h4,
 .footer .source {
   font-family: "Inter";
@@ -16,8 +24,13 @@
   text-decoration-thickness: 0.001rem;
   color: #757575;
   padding-right: 2rem;
+  display: flex;
 }
 
 .footer .source {
   color: #2d2d2d;
+}
+
+.footer img {
+  margin-left: 1.5rem;
 }

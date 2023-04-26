@@ -5,6 +5,13 @@
   margin-top: 4rem;
 }
 
+@media screen and (max-width: 590px) {
+  .outcome .section-header {
+    margin-bottom: 3.1rem;
+    margin-top: 3.1rem;
+  }
+}
+
 .outcome .section-header h2 {
   font-family: "Inter";
   font-style: italic;
@@ -12,19 +19,50 @@
   font-size: 2.4rem;
   line-height: 2.9rem;
   color: #2d2d2d;
-  width: 15%;
+  width: 30%;
+}
+
+@media screen and (max-width: 590px) {
+  .outcome .section-header h2 {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
 }
 
 .outcome .section-header .hdr-line {
-  width: 85%;
+  width: 70%;
   height: 49%;
   border-top: 1px solid #e9e9e9;
+}
+
+.outcome h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #757575;
+}
+
+@media screen and (max-width: 590px) {
+  .outcome h3 {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
 }
 
 .outcome .meaning-section ul {
   padding-left: 2.2rem;
   padding-top: 2.5rem;
   padding-bottom: 4rem;
+  list-style: none;
+}
+
+@media screen and (max-width: 590px) {
+  .outcome .meaning-section ul {
+    padding-top: 1.6rem;
+    padding-bottom: 2.4rem;
+  }
 }
 
 .outcome .meaning-section ul li {
@@ -35,6 +73,21 @@
   line-height: 2.4rem;
   color: #2d2d2d;
   padding-bottom: 1.3rem;
+}
+
+.outcome .meaning-section ul li::before {
+  content: "\2022";
+  color: #a445ed;
+  font-weight: bold;
+  display: inline-block;
+  width: 2rem;
+  margin-left: -2rem;
+}
+
+@media screen and (max-width: 590px) {
+  .outcome .meaning-section ul li {
+    font-size: 1.5rem;
+  }
 }
 
 .outcome .meaning-section ul p {
@@ -48,7 +101,20 @@
   font-style: italic;
 }
 
-.outcome h3 {
+@media screen and (max-width: 590px) {
+  .outcome .meaning-section ul p {
+    font-size: 1.5rem;
+  }
+}
+
+.outcome .synonyms {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.outcome .synonyms h3 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -57,8 +123,23 @@
   color: #757575;
 }
 
-.outcome h3 .synonyms {
+@media screen and (max-width: 590px) {
+  .outcome .synonyms h3 {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+}
+
+.outcome .synonyms .h3-synonyms {
   color: #a445ed;
   font-weight: 700;
   padding-left: 3rem;
+  font-style: italic;
+}
+
+@media screen and (max-width: 590px) {
+  .outcome .synonyms .h3-synonyms {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
 }

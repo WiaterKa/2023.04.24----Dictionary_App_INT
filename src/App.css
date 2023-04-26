@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease-in;
 }
 
 html {
@@ -20,5 +21,23 @@ html {
 @media screen and (max-width: 1330px) {
   .main-container {
     margin-inline: 25rem;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .main-container {
+    margin-inline: 15rem;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .main-container {
+    margin-inline: 4rem;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .main-container {
+    margin-inline: 2.4rem;
   }
 }

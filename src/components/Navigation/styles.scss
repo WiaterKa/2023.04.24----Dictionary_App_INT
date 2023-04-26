@@ -9,6 +9,10 @@ nav {
     justify-content: flex-end;
     align-items: center;
 
+    @media screen and (max-width: 590px) {
+      width: auto;
+    }
+
     .font-box {
       display: flex;
       justify-content: flex-end;
@@ -17,24 +21,37 @@ nav {
       border-right: 1px solid #e9e9e9;
       padding-right: 2.6rem;
 
+      @media screen and (max-width: 590px) {
+        padding-right: 1.6rem;
+      }
+
       .font {
         font-style: normal;
         font-weight: 700;
         font-size: 1.8rem;
         line-height: 2.4rem;
         color: #2d2d2d;
+        cursor: pointer;
+
+        &:hover {
+          color: #a445ed;
+        }
+
+        @media screen and (max-width: 590px) {
+          font-size: 1.4rem;
+        }
       }
 
       .mono {
-        font-family: "Inconsolata", monospace;
+        font-family: "Inconsolata", monospace !important;
       }
 
       .serif {
-        font-family: "Lora", serif;
+        font-family: "Lora", serif !important;
       }
 
       .sans-serif {
-        font-family: "Inter", sans-serif;
+        font-family: "Inter", sans-serif !important;
       }
 
       .font-choice-box {
@@ -51,9 +68,15 @@ nav {
         height: 15rem;
         top: 4rem;
         right: 0;
-        display: none;
+        // display: none;
         transition: all 0.4 ease-in-out;
+        z-index: 10;
+
+        @media screen and (max-width: 590px) {
+          width: 12rem;
+        }
       }
+
       img {
         margin-left: 1.8rem;
 
@@ -66,6 +89,10 @@ nav {
     padding-left: 2.6rem;
     display: flex;
     gap: 2rem;
+
+    @media screen and (max-width: 590px) {
+      padding-left: 1.6rem;
+    }
 
     .toggle-bar {
       .switch {
@@ -110,7 +137,7 @@ nav {
       }
 
       input:checked + .slider {
-        background-color: #757575;
+        background-color: #a445ed;
       }
 
       input:focus + .slider {

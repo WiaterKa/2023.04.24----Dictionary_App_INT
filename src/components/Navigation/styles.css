@@ -11,6 +11,12 @@ nav .nav-interaction-box {
   align-items: center;
 }
 
+@media screen and (max-width: 590px) {
+  nav .nav-interaction-box {
+    width: auto;
+  }
+}
+
 nav .nav-interaction-box .font-box {
   display: flex;
   justify-content: flex-end;
@@ -20,24 +26,41 @@ nav .nav-interaction-box .font-box {
   padding-right: 2.6rem;
 }
 
+@media screen and (max-width: 590px) {
+  nav .nav-interaction-box .font-box {
+    padding-right: 1.6rem;
+  }
+}
+
 nav .nav-interaction-box .font-box .font {
   font-style: normal;
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 2.4rem;
   color: #2d2d2d;
+  cursor: pointer;
+}
+
+nav .nav-interaction-box .font-box .font:hover {
+  color: #a445ed;
+}
+
+@media screen and (max-width: 590px) {
+  nav .nav-interaction-box .font-box .font {
+    font-size: 1.4rem;
+  }
 }
 
 nav .nav-interaction-box .font-box .mono {
-  font-family: "Inconsolata", monospace;
+  font-family: "Inconsolata", monospace !important;
 }
 
 nav .nav-interaction-box .font-box .serif {
-  font-family: "Lora", serif;
+  font-family: "Lora", serif !important;
 }
 
 nav .nav-interaction-box .font-box .sans-serif {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif !important;
 }
 
 nav .nav-interaction-box .font-box .font-choice-box {
@@ -54,8 +77,14 @@ nav .nav-interaction-box .font-box .font-choice-box {
   height: 15rem;
   top: 4rem;
   right: 0;
-  display: none;
   transition: all 0.4 ease-in-out;
+  z-index: 10;
+}
+
+@media screen and (max-width: 590px) {
+  nav .nav-interaction-box .font-box .font-choice-box {
+    width: 12rem;
+  }
 }
 
 nav .nav-interaction-box .font-box img {
@@ -67,6 +96,12 @@ nav .display-manipulation-box {
   padding-left: 2.6rem;
   display: flex;
   gap: 2rem;
+}
+
+@media screen and (max-width: 590px) {
+  nav .display-manipulation-box {
+    padding-left: 1.6rem;
+  }
 }
 
 nav .display-manipulation-box .toggle-bar {
@@ -114,7 +149,7 @@ nav .display-manipulation-box .toggle-bar .slider:before {
 }
 
 nav .display-manipulation-box .toggle-bar input:checked + .slider {
-  background-color: #757575;
+  background-color: #a445ed;
 }
 
 nav .display-manipulation-box .toggle-bar input:focus + .slider {
