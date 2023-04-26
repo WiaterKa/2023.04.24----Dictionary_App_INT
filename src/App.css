@@ -4,10 +4,31 @@
   margin: 0;
   padding: 0;
   transition: all 0.3s ease-in;
+  font-family: inherit;
 }
 
 html {
   font-size: 10px;
+}
+
+html .mono {
+  font-family: "Inconsolata", monospace !important;
+}
+
+html .serif {
+  font-family: "Lora", serif !important;
+}
+
+html .sans-serif {
+  font-family: "Inter", sans-serif !important;
+}
+
+html #dark {
+  background-color: #050505;
+}
+
+html #white {
+  background-color: white;
 }
 
 .main-container {
@@ -40,4 +61,8 @@ html {
   .main-container {
     margin-inline: 2.4rem;
   }
+}
+
+#dark-mode {
+  background-color: black;
 }

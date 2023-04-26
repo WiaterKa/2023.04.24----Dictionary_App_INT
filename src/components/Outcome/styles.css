@@ -13,7 +13,7 @@
 }
 
 .outcome .section-header h2 {
-  font-family: "Inter";
+  font-family: inherit;
   font-style: italic;
   font-weight: 700;
   font-size: 2.4rem;
@@ -36,7 +36,7 @@
 }
 
 .outcome h3 {
-  font-family: "Inter";
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
@@ -66,7 +66,7 @@
 }
 
 .outcome .meaning-section ul li {
-  font-family: "Inter";
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 1.8rem;
@@ -91,7 +91,7 @@
 }
 
 .outcome .meaning-section ul p {
-  font-family: "Inter";
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 1.8rem;
@@ -115,7 +115,7 @@
 }
 
 .outcome .synonyms h3 {
-  font-family: "Inter";
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;

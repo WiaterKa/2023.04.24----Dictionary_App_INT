@@ -62,7 +62,7 @@
 }
 
 .hero .outcome-box .txt-box h1 {
-  font-family: "Inter";
+  font-family: inherit;
   font-style: normal;
   font-weight: 700;
   font-size: 6.4rem;
@@ -78,7 +78,7 @@
 }
 
 .hero .outcome-box .txt-box h2 {
-  font-family: "Inter";
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 2.4rem;

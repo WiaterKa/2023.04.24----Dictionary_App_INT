@@ -8,13 +8,22 @@ import { useState } from "react";
 
 function App() {
   const [outcome, setOutcome] = useState([]);
+  const [globalFont, setGlobalFont] = useState("sans-serif");
+  const [globalBcg, setGlobalBcg] = useState("white");
+
   return (
     <>
-      <div className="main-container">
-        <Navigation />
-        <Hero setOutcome={setOutcome} outcome={outcome} />
-        <Outcome outcome={outcome} />
-        <Footer outcome={outcome} />
+      <div className={globalFont} id={globalBcg ? "white" : "dark"}>
+        <div className="main-container">
+          <Navigation
+            setGlobalFont={setGlobalFont}
+            setGlobalBcg={setGlobalBcg}
+            globalBcg={globalBcg}
+          />
+          <Hero setOutcome={setOutcome} outcome={outcome} />
+          <Outcome outcome={outcome} />
+          <Footer outcome={outcome} />
+        </div>
       </div>
     </>
   );

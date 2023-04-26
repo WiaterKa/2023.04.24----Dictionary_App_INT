@@ -4,10 +4,31 @@
   margin: 0;
   padding: 0;
   transition: all 0.3s ease-in;
+  font-family: inherit;
 }
 
 html {
   font-size: 10px;
+
+  .mono {
+    font-family: "Inconsolata", monospace !important;
+  }
+
+  .serif {
+    font-family: "Lora", serif !important;
+  }
+
+  .sans-serif {
+    font-family: "Inter", sans-serif !important;
+  }
+
+  #dark {
+    background-color: #050505;
+  }
+
+  #white {
+    background-color: white;
+  }
 }
 
 .main-container {
@@ -31,4 +52,8 @@ html {
   @media screen and (max-width: 590px) {
     margin-inline: 2.4rem;
   }
+}
+
+#dark-mode {
+  background-color: black;
 }

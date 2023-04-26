@@ -51,24 +51,11 @@ nav .nav-interaction-box .font-box .font:hover {
   }
 }
 
-nav .nav-interaction-box .font-box .mono {
-  font-family: "Inconsolata", monospace !important;
-}
-
-nav .nav-interaction-box .font-box .serif {
-  font-family: "Lora", serif !important;
-}
-
-nav .nav-interaction-box .font-box .sans-serif {
-  font-family: "Inter", sans-serif !important;
-}
-
 nav .nav-interaction-box .font-box .font-choice-box {
   background: #ffffff;
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
   border-radius: 1.6rem;
   padding: 2.4rem;
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.6rem;
@@ -77,6 +64,8 @@ nav .nav-interaction-box .font-box .font-choice-box {
   height: 15rem;
   top: 4rem;
   right: 0;
+  opacity: 1;
+  display: flex;
   transition: all 0.4 ease-in-out;
   z-index: 10;
 }
@@ -158,4 +147,23 @@ nav .display-manipulation-box .toggle-bar input:focus + .slider {
 
 nav .display-manipulation-box .toggle-bar input:checked + .slider:before {
   transform: translateX(1.8rem);
+}
+
+.d-none {
+  background: #ffffff;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 1.6rem;
+  padding: 2.4rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+  position: absolute;
+  width: 18rem;
+  height: 15rem;
+  top: 4rem;
+  right: 0;
+  opacity: 0;
+  display: flex;
+  transition: all 0.4 ease-in-out;
+  z-index: 10;
 }
