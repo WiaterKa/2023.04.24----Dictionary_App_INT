@@ -13,7 +13,7 @@ export default function Footer({ outcome, darkFont }) {
           type={darkFont ? "white" : ""}
         >
           {outcome[0].sourceUrls[0]}
-          <img src="src/assets/images/icon-new-window.svg" alt="open-source" />
+          <img src="/icon-new-window.svg" alt="open-source" />
         </a>
       </section>
     );
