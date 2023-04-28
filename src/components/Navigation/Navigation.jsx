@@ -24,7 +24,7 @@ export default function Navigation({
 
   return (
     <nav>
-      <img src="src/assets/images/logo.svg" alt="logo" />
+      <img src="/logo.svg" alt="logo" />
 
       <div className="nav-interaction-box">
         <div className="font-box">
@@ -37,7 +37,7 @@ export default function Navigation({
           </div>
           <img
             onClick={handleToggle}
-            src="src/assets/images/icon-arrow-down.svg"
+            src="icon-arrow-down.svg"
             alt="arrow-down"
           />
           <div
