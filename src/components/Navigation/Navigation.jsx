@@ -37,7 +37,7 @@ export default function Navigation({
           </div>
           <img
             onClick={handleToggle}
-            src="icon-arrow-down.svg"
+            src="/icon-arrow-down.svg"
             alt="arrow-down"
           />
           <div

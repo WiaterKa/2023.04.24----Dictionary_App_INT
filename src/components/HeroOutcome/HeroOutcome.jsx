@@ -17,11 +17,7 @@ export default function HeroOutcome({ outcome, darkFont }) {
           <h1 type={darkFont ? "white" : ""}>{outcome[0].word}</h1>
           <h2>{outcome[0].phonetic}</h2>
         </div>
-
-        <div className="img" onClick={playAudio}>
-          {/* // src="src/assets/images/icon-play.svg" */}
-          
-        </div>
+        <img src="/iconplay.svg" alt="play-audio" onClick={playAudio}></img>
       </div>
     );
   }

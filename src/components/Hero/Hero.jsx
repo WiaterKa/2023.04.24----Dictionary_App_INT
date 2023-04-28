@@ -36,7 +36,7 @@ export default function Hero({ setOutcome, outcome, darkFont }) {
             });
           }}
           className="search-svg"
-          src="src/assets/images/icon-search.svg"
+          src="/icon-search.svg"
           alt="search-icon"
         />
       </form>
