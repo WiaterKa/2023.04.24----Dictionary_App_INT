@@ -1,18 +1,33 @@
 import React from "react";
 
-export default function HeroOutcome({ outcome }) {
+export default function HeroOutcome({ outcome, darkFont }) {
   if (outcome.length > 0) {
+    console.log(outcome);
+    console.log(outcome.length);
+
+    const url = outcome[0].phonetics.filter((item) => {
+      return item.audio.includes("http");
+    });
+    const audio = new Audio(url[0].audio);
+
+    const playAudio = () => {
+      audio.play();
+    };
+
     return (
       <div className="outcome-box">
         <div className="txt-box">
-          <h1>{outcome[0].word}</h1>
+          <h1 type={darkFont ? "white" : ""}>{outcome[0].word}</h1>
           <h2>{outcome[0].phonetic}</h2>
-          {console.log(outcome[0].phonetics[0].audio)}
         </div>
-        <img src="src/assets/images/icon-play.svg" alt="play-img" />
+
+        <img
+          src="src/assets/images/icon-play.svg"
+          onClick={playAudio}
+          alt="play-img"
+        />
       </div>
     );
   }
 }
 
-// do ogarnięcia nagranie

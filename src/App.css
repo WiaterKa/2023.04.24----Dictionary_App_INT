@@ -11,32 +11,13 @@ html {
   font-size: 10px;
 }
 
-html .mono {
-  font-family: "Inconsolata", monospace !important;
-}
-
-html .serif {
-  font-family: "Lora", serif !important;
-}
-
-html .sans-serif {
-  font-family: "Inter", sans-serif !important;
-}
-
-html #dark {
-  background-color: #050505;
-}
-
-html #white {
-  background-color: white;
-}
-
 .main-container {
   margin-inline: 35rem;
-  margin-top: 5.5rem;
-  margin-bottom: 12rem;
+  padding-top: 5.5rem;
+  padding-bottom: 12rem;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 1330px) {
@@ -63,6 +44,31 @@ html #white {
   }
 }
 
-#dark-mode {
-  background-color: black;
+[type="white"] {
+  color: white !important;
+}
+
+.mono {
+  font-family: "Inconsolata", monospace !important;
+}
+
+.serif {
+  font-family: "Lora", serif !important;
+}
+
+.sans-serif {
+  font-family: "Inter", sans-serif !important;
+}
+
+#dark {
+  background-color: #050505;
+  color: white !important;
+}
+
+#white {
+  background-color: white;
+}
+
+.isDarkColor {
+  color: white;
 }

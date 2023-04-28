@@ -3,7 +3,7 @@ import HeroOutcome from "../HeroOutcome/HeroOutcome";
 
 import "./styles.scss";
 
-export default function Hero({ setOutcome, outcome }) {
+export default function Hero({ setOutcome, outcome, darkFont }) {
   const [input, setInput] = useState("");
 
   async function getData() {
@@ -19,7 +19,6 @@ export default function Hero({ setOutcome, outcome }) {
           e.preventDefault();
           getData().then((data) => {
             setOutcome(data);
-
           });
         }}
       >
@@ -31,12 +30,17 @@ export default function Hero({ setOutcome, outcome }) {
           value={input}
         ></input>
         <img
+          onClick={() => {
+            getData().then((data) => {
+              setOutcome(data);
+            });
+          }}
           className="search-svg"
           src="src/assets/images/icon-search.svg"
           alt="search-icon"
         />
       </form>
-      <HeroOutcome outcome={outcome} />
+      <HeroOutcome outcome={outcome} darkFont={darkFont} />
     </section>
   );
 }

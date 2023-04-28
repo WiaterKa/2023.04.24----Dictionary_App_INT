@@ -1,16 +1,25 @@
 import React, { useState } from "react";
 import "./styles.scss";
 
-export default function Navigation({ setGlobalFont, setGlobalBcg, globalBcg }) {
-  const [isActive, setActive] = useState("false");
+export default function Navigation({
+  setGlobalFont,
+  setGlobalBcg,
+  globalBcg,
+  darkFont,
+  setDarkFont,
+  darkFontBox,
+  setDarkFontBox,
+}) {
+  const [isActive, setActive] = useState("font-choice-box");
 
   const handleToggle = () => {
     setActive(!isActive);
   };
 
-  function isDark({ globalBcg }) {
-    console.log(globalBcg);
+  function isDark() {
     setGlobalBcg(!globalBcg);
+    setDarkFont(!darkFont);
+    setDarkFontBox(!darkFontBox);
   }
 
   return (
@@ -19,7 +28,11 @@ export default function Navigation({ setGlobalFont, setGlobalBcg, globalBcg }) {
 
       <div className="nav-interaction-box">
         <div className="font-box">
-          <div onClick={handleToggle} className="current-font font sans-serif">
+          <div
+            onClick={handleToggle}
+            className="current-font font sans-serif"
+            type={darkFont ? "white" : ""}
+          >
             Sans serif
           </div>
           <img
@@ -27,8 +40,12 @@ export default function Navigation({ setGlobalFont, setGlobalBcg, globalBcg }) {
             src="src/assets/images/icon-arrow-down.svg"
             alt="arrow-down"
           />
-          <div className={isActive ? "font-choice-box" : "d-none"}>
+          <div
+            datatype={darkFontBox ? "dark-font-box" : ""}
+            className={isActive ? "d-none" : "font-choice-box"}
+          >
             <p
+              type={darkFont ? "white" : ""}
               className="font sans-serif"
               onClick={() => {
                 setGlobalFont("sans-serif");
@@ -37,6 +54,7 @@ export default function Navigation({ setGlobalFont, setGlobalBcg, globalBcg }) {
               Sans serif
             </p>
             <p
+              type={darkFont ? "white" : ""}
               className="font serif"
               onClick={() => {
                 setGlobalFont("serif");
@@ -45,6 +63,7 @@ export default function Navigation({ setGlobalFont, setGlobalBcg, globalBcg }) {
               Serif
             </p>
             <p
+              type={darkFont ? "white" : ""}
               className="font mono"
               onClick={() => {
                 setGlobalFont("mono");
@@ -56,18 +75,31 @@ export default function Navigation({ setGlobalFont, setGlobalBcg, globalBcg }) {
         </div>
 
         <div className="display-manipulation-box">
-          <div
-            className="toggle-bar"
-            onClick={() => {
-              isDark();
-            }}
-          >
+          <div className="toggle-bar">
             <label className="switch">
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                onClick={() => {
+                  isDark();
+                }}
+              />
               <span className="slider round"></span>
             </label>
           </div>
-          <img src="src/assets/images/icon-moon.svg" alt="moon-svg" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              // stroke-linecap="round" stroke-linejoin="round"
+              // stroke-width="1.5"
+              d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z"
+            />
+          </svg>
         </div>
       </div>
     </nav>

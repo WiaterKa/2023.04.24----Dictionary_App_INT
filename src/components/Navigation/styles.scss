@@ -55,7 +55,7 @@ nav {
         height: 15rem;
         top: 4rem;
         right: 0;
-        opacity: 1;
+        // opacity: 1;
         display: flex;
         transition: all 0.4 ease-in-out;
         z-index: 10;
@@ -63,6 +63,11 @@ nav {
         @media screen and (max-width: 590px) {
           width: 12rem;
         }
+      }
+
+      [datatype="dark-font-box"] {
+        background-color: #1f1f1f;
+        box-shadow: 0px 5px 30px #a445ed;
       }
 
       img {
@@ -81,6 +86,14 @@ nav {
     @media screen and (max-width: 590px) {
       padding-left: 1.6rem;
     }
+
+    svg {
+      color: #757575;
+    }
+
+    // .svg-dark {
+    //   stroke: #a445ed;
+    // }
 
     .toggle-bar {
       .switch {
@@ -152,8 +165,8 @@ nav {
   height: 15rem;
   top: 4rem;
   right: 0;
-  opacity: 0;
   display: flex;
   transition: all 0.4 ease-in-out;
   z-index: 10;
+  display: none;
 }

@@ -5,11 +5,15 @@ import Hero from "./components/Hero/Hero";
 import Navigation from "./components/Navigation/Navigation";
 import Outcome from "./components/Outcome/Outcome";
 import { useState } from "react";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   const [outcome, setOutcome] = useState([]);
   const [globalFont, setGlobalFont] = useState("sans-serif");
-  const [globalBcg, setGlobalBcg] = useState("white");
+  const [globalBcg, setGlobalBcg] = useState("dark");
+  const [isDark, setIsDark] = useState("");
+  const [darkFont, setDarkFont] = useState("");
+  const [darkFontBox, setDarkFontBox] = useState("")
 
   return (
     <>
@@ -17,12 +21,23 @@ function App() {
         <div className="main-container">
           <Navigation
             setGlobalFont={setGlobalFont}
-            setGlobalBcg={setGlobalBcg}
             globalBcg={globalBcg}
+            setGlobalBcg={setGlobalBcg}
+            darkFont={darkFont}
+            setDarkFont={setDarkFont}
+            darkFontBox={darkFontBox}
+            setDarkFontBox={setDarkFontBox}
           />
-          <Hero setOutcome={setOutcome} outcome={outcome} />
-          <Outcome outcome={outcome} />
-          <Footer outcome={outcome} />
+          <Hero
+            setOutcome={setOutcome}
+            outcome={outcome}
+            isDark={isDark}
+            setIsDark={setIsDark}
+            darkFont={darkFont}
+          />
+          <NotFound outcome={outcome} darkFont={darkFont}/>
+          <Outcome outcome={outcome} darkFont={darkFont} />
+          <Footer outcome={outcome} darkFont={darkFont} />
         </div>
       </div>
     </>

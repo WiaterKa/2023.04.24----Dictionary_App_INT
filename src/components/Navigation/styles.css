@@ -64,7 +64,6 @@ nav .nav-interaction-box .font-box .font-choice-box {
   height: 15rem;
   top: 4rem;
   right: 0;
-  opacity: 1;
   display: flex;
   transition: all 0.4 ease-in-out;
   z-index: 10;
@@ -74,6 +73,11 @@ nav .nav-interaction-box .font-box .font-choice-box {
   nav .nav-interaction-box .font-box .font-choice-box {
     width: 12rem;
   }
+}
+
+nav .nav-interaction-box .font-box [datatype="dark-font-box"] {
+  background-color: #1f1f1f;
+  box-shadow: 0px 5px 30px #a445ed;
 }
 
 nav .nav-interaction-box .font-box img {
@@ -91,6 +95,10 @@ nav .display-manipulation-box {
   nav .display-manipulation-box {
     padding-left: 1.6rem;
   }
+}
+
+nav .display-manipulation-box svg {
+  color: #757575;
 }
 
 nav .display-manipulation-box .toggle-bar {
@@ -162,8 +170,8 @@ nav .display-manipulation-box .toggle-bar input:checked + .slider:before {
   height: 15rem;
   top: 4rem;
   right: 0;
-  opacity: 0;
   display: flex;
   transition: all 0.4 ease-in-out;
   z-index: 10;
+  display: none;
 }

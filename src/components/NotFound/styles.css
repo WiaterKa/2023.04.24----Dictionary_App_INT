@@ -1,0 +1,33 @@
+.not-found-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 13rem;
+}
+
+.not-found-box .emoji {
+  font-size: 6rem;
+}
+
+.not-found-box h2 {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-align: center;
+  color: #2d2d2d;
+  padding-top: 3rem;
+  padding-bottom: 2.4rem;
+}
+
+.not-found-box p {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  text-align: center;
+  color: #757575;
+}
