@@ -13,13 +13,14 @@ function App() {
   const [globalBcg, setGlobalBcg] = useState("dark");
   const [isDark, setIsDark] = useState("");
   const [darkFont, setDarkFont] = useState("");
-  const [darkFontBox, setDarkFontBox] = useState("")
+  const [darkFontBox, setDarkFontBox] = useState("");
 
   return (
     <>
       <div className={globalFont} id={globalBcg ? "white" : "dark"}>
         <div className="main-container">
           <Navigation
+            globalFont={globalFont}
             setGlobalFont={setGlobalFont}
             globalBcg={globalBcg}
             setGlobalBcg={setGlobalBcg}
@@ -35,7 +36,7 @@ function App() {
             setIsDark={setIsDark}
             darkFont={darkFont}
           />
-          <NotFound outcome={outcome} darkFont={darkFont}/>
+          <NotFound outcome={outcome} darkFont={darkFont} />
           <Outcome outcome={outcome} darkFont={darkFont} />
           <Footer outcome={outcome} darkFont={darkFont} />
         </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./styles.scss";
 
 export default function Navigation({
+  globalFont,
   setGlobalFont,
   setGlobalBcg,
   globalBcg,
@@ -11,6 +12,7 @@ export default function Navigation({
   setDarkFontBox,
 }) {
   const [isActive, setActive] = useState("font-choice-box");
+  const [currentFont, setCurrentFont] = useState("Sans serif");
 
   const handleToggle = () => {
     setActive(!isActive);
@@ -30,10 +32,10 @@ export default function Navigation({
         <div className="font-box">
           <div
             onClick={handleToggle}
-            className="current-font font sans-serif"
+            className={`current-font font ${globalFont}`}
             type={darkFont ? "white" : ""}
           >
-            Sans serif
+            {currentFont}
           </div>
           <img
             onClick={handleToggle}
@@ -49,6 +51,7 @@ export default function Navigation({
               className="font sans-serif"
               onClick={() => {
                 setGlobalFont("sans-serif");
+                setCurrentFont("Sans serif");
               }}
             >
               Sans serif
@@ -58,6 +61,7 @@ export default function Navigation({
               className="font serif"
               onClick={() => {
                 setGlobalFont("serif");
+                setCurrentFont("Serif");
               }}
             >
               Serif
@@ -67,6 +71,7 @@ export default function Navigation({
               className="font mono"
               onClick={() => {
                 setGlobalFont("mono");
+                setCurrentFont("Mono");
               }}
             >
               Mono
