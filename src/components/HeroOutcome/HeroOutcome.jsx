@@ -2,9 +2,6 @@ import React from "react";
 
 export default function HeroOutcome({ outcome, darkFont }) {
   if (outcome.length > 0) {
-    console.log(outcome);
-    console.log(outcome.length);
-
     const url = outcome[0].phonetics.filter((item) => {
       return item.audio.includes("http");
     });
@@ -21,13 +18,11 @@ export default function HeroOutcome({ outcome, darkFont }) {
           <h2>{outcome[0].phonetic}</h2>
         </div>
 
-        <img
-          src="src/assets/images/icon-play.svg"
-          onClick={playAudio}
-          alt="play-img"
-        />
+        <div className="img" onClick={playAudio}>
+          {/* // src="src/assets/images/icon-play.svg" */}
+          
+        </div>
       </div>
     );
   }
 }
-
