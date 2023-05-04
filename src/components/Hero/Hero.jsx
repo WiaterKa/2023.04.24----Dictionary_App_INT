@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HeroOutcome from "../HeroOutcome/HeroOutcome";
+import HeroOutcome from "../HeroMainOutcome/HeroMainOutcome";
 
 import "./styles.scss";
 

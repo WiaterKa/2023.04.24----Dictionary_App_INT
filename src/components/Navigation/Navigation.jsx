@@ -26,14 +26,16 @@ export default function Navigation({
 
   return (
     <nav>
-      <img src="/logo.svg" alt="logo" />
+      <a href="/">
+        <img src="/logo.svg" alt="logo" />
+      </a>
 
       <div className="nav-interaction-box">
         <div className="font-box">
           <div
             onClick={handleToggle}
             className={`current-font font ${globalFont}`}
-            type={darkFont ? "white" : ""}
+            data-color={darkFont ? "white" : ""}
           >
             {currentFont}
           </div>
@@ -47,7 +49,7 @@ export default function Navigation({
             className={isActive ? "d-none" : "font-choice-box"}
           >
             <p
-              type={darkFont ? "white" : ""}
+              data-color={darkFont ? "white" : ""}
               className="font sans-serif"
               onClick={() => {
                 handleToggle();
@@ -58,7 +60,7 @@ export default function Navigation({
               Sans serif
             </p>
             <p
-              type={darkFont ? "white" : ""}
+              data-color={darkFont ? "white" : ""}
               className="font serif"
               onClick={() => {
                 setGlobalFont("serif");
@@ -69,7 +71,7 @@ export default function Navigation({
               Serif
             </p>
             <p
-              type={darkFont ? "white" : ""}
+              data-color={darkFont ? "white" : ""}
               className="font mono"
               onClick={() => {
                 setGlobalFont("mono");

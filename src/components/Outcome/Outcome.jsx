@@ -11,7 +11,7 @@ export default function Outcome({ outcome, darkFont }) {
       return (
         <section className="outcome" key={item.partOfSpeech}>
           <div className="section-header">
-            <h2 type={darkFont ? "white" : ""}>{item.partOfSpeech}</h2>
+            <h2 data-color={darkFont ? "white" : ""}>{item.partOfSpeech}</h2>
             <div className="hdr-line"></div>
           </div>
           <OutcomeMeanings item={item} darkFont={darkFont} />

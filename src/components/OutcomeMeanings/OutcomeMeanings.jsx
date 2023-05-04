@@ -8,7 +8,7 @@ export default function OutcomeMeanings({ item, darkFont }) {
       <ul>
         {item.definitions.map((item) => {
           return (
-            <li type={darkFont ? "white" : ""} key={item.definition}>
+            <li data-color={darkFont ? "white" : ""} key={item.definition}>
               {item.definition}
               <Example item={item} />
             </li>

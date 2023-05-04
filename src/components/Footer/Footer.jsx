@@ -10,7 +10,7 @@ export default function Footer({ outcome, darkFont }) {
           href={outcome[0].sourceUrls[0]}
           target="_blank"
           className="source"
-          type={darkFont ? "white" : ""}
+          data-color={darkFont ? "white" : ""}
         >
           {outcome[0].sourceUrls[0]}
           <img src="/icon-new-window.svg" alt="open-source" />
