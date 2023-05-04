@@ -50,6 +50,7 @@ export default function Navigation({
               type={darkFont ? "white" : ""}
               className="font sans-serif"
               onClick={() => {
+                handleToggle();
                 setGlobalFont("sans-serif");
                 setCurrentFont("Sans serif");
               }}
@@ -62,6 +63,7 @@ export default function Navigation({
               onClick={() => {
                 setGlobalFont("serif");
                 setCurrentFont("Serif");
+                handleToggle();
               }}
             >
               Serif
@@ -72,6 +74,7 @@ export default function Navigation({
               onClick={() => {
                 setGlobalFont("mono");
                 setCurrentFont("Mono");
+                handleToggle();
               }}
             >
               Mono
